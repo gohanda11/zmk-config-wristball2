@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
-      url-base: https://github.com/kumamuk-git
+      url-base: https://github.com/gohanda11-git
   projects:
     - name: zmk
       remote: zmkfirmware
