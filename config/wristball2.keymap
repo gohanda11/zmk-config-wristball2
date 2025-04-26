@@ -33,6 +33,12 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+
+            pmw3610_set_orientation: pmw3610_set_orientation {
+            compatible = "zmk,behavior-macro";
+            label = "PMW3610_TOGGLE_ORIENTATION";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LC(F1)>;  // Control+F1をトリガーとして使用
         };
     };
 
@@ -44,6 +50,12 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+
+            toggle_orientation: toggle_orientation {
+            compatible = "zmk,behavior-sensor-rotate-mode";
+            label = "TOGGLE_ORIENTATION";
+            #sensor-binding-cells = <0>;
+            bindings = <&pmw3610_set_orientation>;
         };
     };
 
@@ -52,7 +64,7 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &kp D
+                &toggle_orientation &kp B &kp C &kp D
                 &kp E &kp F
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
