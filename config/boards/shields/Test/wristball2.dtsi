@@ -60,13 +60,19 @@
         compatible = "zmk,behavior-sensor-rotate";
         label = "PMW3610_ROT_0";
         #sensor-binding-cells = <0>;
-        bindings = <&pmw3610_set_orientation 0>;  // bindingsを追加
+        bindings = <&pmw3610_orientation 0>;
     };
 
     pmw3610_rot_90: pmw3610_rot_90 {
         compatible = "zmk,behavior-sensor-rotate";
         label = "PMW3610_ROT_90";
         #sensor-binding-cells = <0>;
-        bindings = <&pmw3610_set_orientation 90>;  // bindingsを追加
+        bindings = <&pmw3610_orientation 90>;
+    };
+
+    pmw3610_orientation: pmw3610_orientation {
+        compatible = "zmk,behavior-sensor-rotate-var";
+        label = "PMW3610_ORIENTATION";
+        #sensor-binding-cells = <1>;
     };
 };

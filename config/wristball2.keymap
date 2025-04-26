@@ -47,9 +47,9 @@
         };
 
         rot_sw: rotation_switch {
-            compatible = "zmk,behavior-sensor-rotate-toggle";
+            compatible = "zmk,behavior-toggle";
             label = "ROTATION_SWITCH";
-            #sensor-binding-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&pmw3610_rot_0>, <&pmw3610_rot_90>;
         };
     };
