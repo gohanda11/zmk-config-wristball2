@@ -45,13 +45,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        rot_sw: rot_sw {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ROT_SW";
-            #sensor-binding-cells = <2>; 
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     keymap {
@@ -59,10 +52,10 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &kp D
-                &kp E &kp F
+                &kp A &kp B &kp C &lt_to_layer_0 5 MINUS
+                &kp D &kp E    
             >;
-            sensor-bindings = <&rot_sw PLUS MINUS>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         FUNCTION {
