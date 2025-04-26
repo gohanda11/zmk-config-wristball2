@@ -47,9 +47,10 @@
         };
 
         rot_sw: rot_sw {
-            compatible = "zmk,behavior-sensor-rotate-key";
+            compatible = "zmk,behavior-sensor-rotate"; 
             label = "ROT_SW";
-            #sensor-binding-cells = <0>;
+            #binding-cells = <2>;                   
+            bindings = <&kp>, <&kp>;               
         };
     };
 
@@ -58,7 +59,7 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &rot_sw
+                &kp A &kp B &kp C &rot_sw PLUS MINUS  
                 &kp D &kp E    
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
