@@ -1,0 +1,3 @@
+#pragma once
+
+#define K_CONFIG_PMW3610_ORIENTATION_90 0x7F01
