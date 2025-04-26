@@ -39,7 +39,7 @@
         pmw3610_rotate: pmw3610_rotate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &pmw3610_cmd ROTATE>;
+            bindings = <&pmw3610_cmd ROTATE>;
             label = "PMW3610_ROTATE";
         };
     };
