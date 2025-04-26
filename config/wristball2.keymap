@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define MOUSE 4
 #define SCROLL 5
@@ -35,13 +36,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        pmw3610_rotate: pmw3610_rotate {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&pmw3610_cmd ROTATE>;
-            label = "PMW3610_ROTATE";
-        };
     };
 
     behaviors {
@@ -54,11 +48,11 @@
             tapping-term-ms = <200>;
         };
 
-        rot_sw: rotation_switch {
-            compatible = "zmk,behavior-sensor-rotate";
+        rot_sw: pmw_rotation {
+            compatible = "zmk,behavior-key-press";
             #binding-cells = <0>;
-            label = "ROTATION_SWITCH";
-            bindings = <&pmw3610_rotate>;
+            bindings = <&kp K_PMW_ROTATE>;
+            label = "PMW_ROTATION";
         };
     };
 
@@ -67,7 +61,7 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &rot_sw
+                &kp A &kp B &rot_sw &kp C &rot_sw
                 &kp E &kp F
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
