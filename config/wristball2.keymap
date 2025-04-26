@@ -46,11 +46,10 @@
             tapping-term-ms = <200>;
         };
 
-        rot_sw: rotation_switch {
-            compatible = "zmk,behavior-toggle";
-            label = "ROTATION_SWITCH";
-            #binding-cells = <0>;
-            bindings = <&pmw3610_rot_0>, <&pmw3610_rot_90>;
+        rot_sw: rot_sw {
+            compatible = "zmk,behavior-sensor-rotate-key";
+            label = "ROT_SW";
+            #sensor-binding-cells = <0>;
         };
     };
 
@@ -59,7 +58,7 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &lt_to_layer_0 5 MINUS
+                &kp A &kp B &kp C &rot_sw
                 &kp D &kp E    
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -96,7 +95,7 @@
 
         SCROLL {
             bindings = <
-                &rot_sw &trans &trans &trans
+                &trans &trans &trans &trans
                 &trans &trans
             >;
         };

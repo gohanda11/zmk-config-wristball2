@@ -55,24 +55,4 @@
         sensors = <&right_encoder>;  // left_encoderを削除
         triggers-per-rotation = <10>;
     };
-
-    pmw3610_orientation: pmw3610_orientation {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        label = "PMW3610_ORIENTATION";
-        #binding-cells = <1>;
-    };
-
-    pmw3610_rot_0: pmw3610_rot_0 {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "PMW3610_ROT_0";
-        #sensor-binding-cells = <0>;
-        bindings = <&pmw3610_orientation 0>;
-    };
-
-    pmw3610_rot_90: pmw3610_rot_90 {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "PMW3610_ROT_90";
-        #sensor-binding-cells = <0>;
-        bindings = <&pmw3610_orientation 90>;
-    };
 };
