@@ -47,10 +47,10 @@
         };
 
         rot_sw: rotation_switch {
-            compatible = "zmk,behavior-sensor-rotate-pmw3610";
+            compatible = "zmk,behavior-sensor-rotate";  // 変更
             label = "ROTATION_SWITCH";
             #binding-cells = <0>;
-            bindings = <&pmw3610_rotation_toggle>;
+            bindings = <&trans>;  // 一時的にtransに変更
         };
     };
 
