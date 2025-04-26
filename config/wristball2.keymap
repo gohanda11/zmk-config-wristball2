@@ -45,6 +45,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        // センサー向き切り替え用のマクロを追加
+        toggle_orientation: toggle_orientation {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "TOGGLE_ORIENTATION";
+            #sensor-binding-cells = <0>;
+        };
     };
 
     keymap {
@@ -53,10 +60,11 @@
         default_layer {
             bindings = <
                 &kp A &kp B &kp C &kp D
-                &kp E &kp F
+                &kp E &toggle_orientation
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
+        // ...ex
 
         FUNCTION {
             bindings = <
