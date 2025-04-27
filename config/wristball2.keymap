@@ -35,13 +35,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        rot_sw: rot_sw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp K_CONFIG_PMW3610_ORIENTATION_90>;
-            label = "ROT_SW";
-        };
     };
 
     behaviors {
@@ -60,8 +53,8 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &rot_sw
-                &kp D &kp E    
+                &kp A &kp B &kp C &kp D
+                &kp E &kp F
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
