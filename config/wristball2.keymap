@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include "boards/shields/Test/include/custom_keycodes.h"
 
 #define MOUSE 4
 #define SCROLL 5
@@ -14,6 +13,18 @@
 };
 
 / {
+    // トラックボールの角度を変更するモジュールを追加
+    trackball_orientation: trackball_orientation {
+        compatible = "zmk,input-listener-action";
+        device = <&trackball>;
+        layer-bindings = <
+            0       K_CONFIG_PMW3610_ORIENTATION_90
+            MOUSE   K_CONFIG_PMW3610_ORIENTATION_90
+            SCROLL  K_CONFIG_PMW3610_ORIENTATION_90
+            NUM     0
+        >;
+    };
+
     combos {
         compatible = "zmk,combos";
 
