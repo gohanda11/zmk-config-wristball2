@@ -13,17 +13,6 @@
 };
 
 / {
-    trackball_orientation: trackball_orientation {
-        compatible = "zmk,input-listener-action";
-        device = <&trackball>;
-        layer-bindings = <
-            0       90
-            MOUSE   90
-            SCROLL  90
-            NUM     0
-        >;
-    };
-
     combos {
         compatible = "zmk,combos";
 
