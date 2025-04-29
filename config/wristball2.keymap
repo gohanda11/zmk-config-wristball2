@@ -13,17 +13,6 @@
 };
 
 / {
-    trackball_orientation: trackball_orientation {
-        compatible = "zmk,input-listener-action";
-        device = <&trackball>;
-        layer-bindings = <
-            0       K_CONFIG_PMW3610_ORIENTATION_90
-            MOUSE   K_CONFIG_PMW3610_ORIENTATION_90
-            SCROLL  K_CONFIG_PMW3610_ORIENTATION_90
-            NUM     0
-        >;
-    };
-
     combos {
         compatible = "zmk,combos";
 
