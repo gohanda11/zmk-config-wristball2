@@ -13,6 +13,17 @@
 };
 
 / {
+    trackball_orientation: trackball_orientation {
+        compatible = "zmk,input-listener-action";
+        device = <&trackball>;
+        layer-bindings = <
+            0       K_CONFIG_PMW3610_ORIENTATION_90
+            MOUSE   K_CONFIG_PMW3610_ORIENTATION_90
+            SCROLL  K_CONFIG_PMW3610_ORIENTATION_90
+            NUM     0
+        >;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -55,6 +66,7 @@
                 &kp A &kp B &kp C &kp D
                 &kp E &kp F
             >;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         FUNCTION {
@@ -76,6 +88,7 @@
                 &trans &trans &trans &trans
                 &trans &trans
             >;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
