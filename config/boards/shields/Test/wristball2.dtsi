@@ -41,10 +41,4 @@
                 , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 ;
     };
-
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&right_encoder>;  // left_encoderを削除
-        triggers-per-rotation = <10>;
-    };
 };
