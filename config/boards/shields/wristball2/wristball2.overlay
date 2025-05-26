@@ -54,5 +54,8 @@
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         automouse-layer = <4>;
         scroll-layers = <5>;
+        // レイヤーごとの角度設定
+        orientation-layers = <1 2>;        // レイヤー1と2で角度を変更
+        layer-orientations = <1 2>;        // レイヤー1は90度、レイヤー2は180度
     };
 };
