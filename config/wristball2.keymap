@@ -52,50 +52,50 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B &kp C &kp D
-                &kp E &kp F
+&kp A  &kp B  &kp C  &lt 5 D
+&mo 1  &mo 2
             >;
         };
 
         FUNCTION {
             bindings = <
-                &trans &trans &trans &trans
-                &trans &trans
+&trans  &trans  &trans  &lt 5 D
+&mo 0   &mo 2
             >;
         };
 
         NUM {
             bindings = <
-                &trans &trans &trans &trans
-                &trans &trans
+&trans  &trans  &trans  &lt 5 D
+&mo 0   &mo 1
             >;
         };
 
         ARROW {
             bindings = <
-                &trans &trans &trans &trans
-                &trans &trans
+&trans  &trans  &trans  &trans
+&trans  &trans
             >;
         };
 
         MOUSE {
             bindings = <
-                &trans &trans &trans &trans
-                &trans &trans
+&trans  &trans  &trans  &trans
+&trans  &trans
             >;
         };
 
         SCROLL {
             bindings = <
-                &trans &trans &trans &trans
-                &trans &trans
+&trans  &trans  &trans  &trans
+&trans  &trans
             >;
         };
 
         layer_6 {
             bindings = <
-                &trans &trans &trans &trans
-                &trans &trans
+&trans  &trans  &trans  &trans
+&trans  &trans
             >;
         };
     };
