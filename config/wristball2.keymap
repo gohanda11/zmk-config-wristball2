@@ -46,14 +46,14 @@
             tapping-term-ms = <200>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp A  &kp B  &kp S  &lt 5 D
-&mo 1  &mo 2
+                &kp A &kp B &kp C &kp D
+                &kp E &kp F
             >;
         };
 
