@@ -50,22 +50,22 @@
 
         default_layer {
             bindings = <
-&kp A  &kp B  &kp C  &lt 5 D
+&kp A  &kp B  &lt 1 C  &lt 5 D
 &to 1  &to 2
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &lt 5 D
-&mo 0   &mo 2
+&kp E  &kp F  &kp G  &lt 5 H
+&mo 0  &mo 2
             >;
         };
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &lt 5 D
-&mo 0   &mo 1
+&kp I  &kp J  &kp K  &lt 5 L
+&mo 0  &mo 1
             >;
         };
 
