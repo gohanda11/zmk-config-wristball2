@@ -1,0 +1,6 @@
+if SHIELD_WRISTBALL2
+
+config ZMK_KEYBOARD_NAME
+    default "wristBall2"
+
+endif

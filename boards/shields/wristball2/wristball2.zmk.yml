@@ -1,0 +1,9 @@
+file_format: "1"
+id: wristball2
+name: wristBall2
+type: shield
+url: https://github.com/gohanda11/zmk-config-wristball
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+  - trackball
